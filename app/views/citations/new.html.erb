@@ -1,4 +1,4 @@
-<h1>New Citation</h1>
+<h2>New Citation</h2>
 
 <%= form_with scope: :citation, url: citations_path, local: true do |form| %>
 
@@ -27,4 +27,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Home', home_index_path %>
+<%= link_to "<button>Home</button>".html_safe, home_index_path %>

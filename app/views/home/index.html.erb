@@ -1,17 +1,11 @@
-<h1>Hello, Netguru!</h1>
-<%= link_to 'New citation', new_citation_path %>
-<h1>Listing citations</h1>
-<table>
-  <tr>
-    <th>Citation</th>
-    <th>Author</th>
-    <th></th>
-  </tr>
+<h2>Hello, Netguru!</h2>
+<h3>Listing of citations</h3>
 
-  <% @citations.each do |citation| %>
-    <tr>
-      <td><%= citation.citation %></td>
-      <td><%= citation.author %></td>
-    </tr>
-  <% end %>
-</table>
+<%= link_to "<button>Add new citation</button>".html_safe, new_citation_path %>
+
+<% @citations.each do |citation| %>
+  <section class="citation_section">
+    <p class="citation_text">"<%= citation.citation %>"</p>
+    <h5><%= citation.author %></h5>
+  </section>
+<% end %>

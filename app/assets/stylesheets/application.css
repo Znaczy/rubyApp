@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    font-family: arial, sans-serif;
+    text-align: center;
+}
+
+.citation_section {
+    text-align: right;
+}
+
+.citation_text{
+    font-family: "Open Sans", Arial, sans-serif;
+    font-style: italic;
+}
+
+button {
+    background-color: rgb(0, 214, 100);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
+#error_explanation{
+    color: crimson;
+}
