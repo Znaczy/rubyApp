@@ -1,0 +1,30 @@
+<h1>New Citation</h1>
+
+<%= form_with scope: :citation, url: citations_path, local: true do |form| %>
+
+  <p>
+    <%= form.label :citation %><br>
+    <%= form.text_area :citation %>
+  </p>
+
+  <% if @citation.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% @citation.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :author %><br>
+    <%= form.text_field :author %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Home', home_index_path %>
